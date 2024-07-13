@@ -374,3 +374,55 @@ fun testListLambda() {
     val lambda = { fruit: String -> fruit.length }
     val maxLengthFruit = list.maxBy(lambda)
 }
+
+fun testListLambda1() {
+    val list = listOf("Apple", "Banana", "Orange", "Pear", "Grape", "Watermelon")
+    val maxLengthFruit = list.maxBy({ fruit: String -> fruit.length })
+}
+
+// Kotlin规定，当Lambda参数是函数的最后一个参数时，可以将Lambda表达式移到函数括 号的外面
+fun testListLambda2() {
+    val list = listOf("Apple", "Banana", "Orange", "Pear", "Grape", "Watermelon")
+    val maxLengthFruit = list.maxBy() { fruit: String -> fruit.length }
+}
+
+// 如果Lambda参数是函数的唯一一个参数的话，还可以将函数的括号省略
+fun testListLambda3() {
+    val list = listOf("Apple", "Banana", "Orange", "Pear", "Grape", "Watermelon")
+    val maxLengthFruit = list.maxBy { fruit: String -> fruit.length }
+}
+
+// 由于Kotlin拥有出色的类型 推导机制，Lambda表达式中的参数列表其实在大多数情况下不必声明参数类型
+fun testListLambda4() {
+    val list = listOf("Apple", "Banana", "Orange", "Pear", "Grape", "Watermelon")
+    val maxLengthFruit = list.maxBy { fruit -> fruit.length }
+}
+
+// 最后，当Lambda表达式的参数列表中只有一个参数时，也不必声明参数名，而是可以使用it 关键字来代替，那么代码就变成了:
+fun testListLambda5() {
+    val list = listOf("Apple", "Banana", "Orange", "Pear", "Grape", "Watermelon")
+    val maxLengthFruit = list.maxBy { it.length }
+}
+
+// 6.2.2 Java函数式API的使用
+
+// 7. 空指针检查
+// 7.1 辅助工具——let
+// let既不是操作符，也不是什么关键 字，而是一个函数
+fun testLetFun() {
+//    obj.let { obj2 ->
+//         编写具体的业务逻辑
+//    }
+}
+//可以看到，这里调用了obj对象的let函数，然后Lambda表达式中的代码就会立即执行，并且 这个obj对象本身还会作为参数传递到Lambda表达式中。不过，为了防止变量重名，这里我将 参数名改成了obj2，但实际上它们是同一个对象，这就是let函数的作用。
+
+// 8. 字符串内嵌表达式
+// "hello, $name. nice to meet you!"
+
+// 8.1 函数的参数默认值
+fun printParams(num: Int, str: String = "hello") {
+    println("num is $num , str is $str")
+}
+
+// 9. Activity是什么
+// 9.1 Activity的基本用法
