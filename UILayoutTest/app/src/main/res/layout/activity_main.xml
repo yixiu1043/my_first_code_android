@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?><!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:orientation="horizontal"-->
+<!--    android:id="@+id/main"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent">-->
+<!--    1. android:layout_gravity  指定对齐方式-->
+<!--    <Button-->
+<!--        android:id="@+id/button1"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="top"-->
+<!--        android:text="Button 1" />-->
+<!--    <Button-->
+<!--        android:id="@+id/button2"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center_vertical"-->
+<!--        android:text="Button 2" />-->
+<!--    <Button-->
+<!--        android:id="@+id/button3"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="bottom"-->
+<!--        android:text="Button 3" />-->
+
+
+<!--  2.  android:layout_weight  弹性布局-->
+<!--    使用layout_weight实现宽度自适配效果-->
+<!--    <EditText-->
+<!--        android:id="@+id/input_message"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_weight="1"-->
+<!--        android:hint="Type something"-->
+<!--        tools:ignore="Suspicious0dp" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/send"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_weight="1"-->
+<!--        android:text="Send"-->
+<!--        />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/send"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Send"-->
+<!--        />-->
+<!--</LinearLayout>-->
+
+<!--    3. RelativeLayout又称作相对布局-->
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:id="@+id/main"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent">-->
+<!--    3.1 相对父元素定位-->
+<!--    <Button-->
+<!--        android:id="@+id/button1"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:text="Button 1" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button2"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:text="Button 2" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button3"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:text="Button 3" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button4"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:text="Button 4" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button5"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:text="Button 5" />-->
+<!--    3.2 相对于控件进行定位-->
+<!--    <Button-->
+<!--        android:id="@+id/button3"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:text="Button 3" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button1"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_above="@id/button3"-->
+<!--        android:layout_toLeftOf="@id/button3"-->
+<!--        android:text="Button 1" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button2"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_above="@id/button3"-->
+<!--        android:layout_toRightOf="@id/button3"-->
+<!--        android:text="Button 2" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button4"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/button3"-->
+<!--        android:layout_toLeftOf="@id/button3"-->
+<!--        android:text="Button 4" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button5"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/button3"-->
+<!--        android:layout_toRightOf="@id/button3"-->
+<!--        android:text="Button 5" />-->
+<!--</RelativeLayout>-->
+
+<!--    FrameLayout又称作帧布局-->
+<!--    这种布局没有丰富的定位方式，所有的控件都会默认摆放在布局的左上角-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This is TextView" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+</FrameLayout>
