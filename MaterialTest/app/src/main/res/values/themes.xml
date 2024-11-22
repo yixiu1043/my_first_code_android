@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MaterialTest" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+<!--        <item name="colorPrimary">@color/colorPrimary</item>-->
+<!--        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+<!--        <item name="colorAccent">@color/colorAccent</item>-->
+    </style>
+
+    <style name="Theme.MaterialTest" parent="Base.Theme.MaterialTest" />
+
+    <!--侵入状态栏，内容不被遮挡，显示状态栏，状态栏图标文字为白，背景透明，要求最外层为CoordinatorLayout-->
+    <style name="FruitActivityTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <!--状态栏透明-->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <!--防止内容被遮挡但侵入状态栏-->
+        <item name="android:fitsSystemWindows">true</item>
+        <!--由于界面主黑色，状态栏文字设置为白-->
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>
